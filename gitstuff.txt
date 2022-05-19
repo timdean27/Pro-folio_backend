@@ -1,0 +1,17 @@
+to pull dev
+
+git checkout dev
+git pull origin dev
+
+
+to push to dev
+
+git checkout (to your branch)
+git rebase dev
+git add .
+git commit -m ""
+git push origin (your branch)
+
+
+then go to github
+creat a pull request form your branch to dev branch
