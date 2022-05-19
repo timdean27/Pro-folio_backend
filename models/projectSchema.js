@@ -1,10 +1,14 @@
-import mongoose from 'mongoose';
+const mongoose = require('../Db/connection');
 
-const name_Schema = mongoose.Schema({
-    name: {type: String,required: true},
-})
-
-
-const Name_Schema = mongoose.model('Name_Schema' , name_Schema)
-
-export default Name_Schema
+const FirstSchema = new mongoose.Schema(
+    {
+        name: {type: String},
+        img: {type: String},
+        title: {type: String},
+    },
+    
+  );
+  
+  const setFirstShema = mongoose.model('pro3schema', FirstSchema);
+  
+  module.exports = setFirstShema;

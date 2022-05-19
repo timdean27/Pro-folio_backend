@@ -1,28 +1,23 @@
-import express from 'express';
-//import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import cors from 'cors';
+require('dotenv').config();
+const express = require('express')
+const app = express()
+
+const cors = require('cors');
 
 
-import postRoutes from './Routes/routes.js'
+const postRoutes = require('./Routes/routes.js')
 
-const app = express();
 
 app.use('/home', postRoutes)
-
-
 app.use(cors());
-
-//const CONNECTION_URL = 'mongodb_link'
-const CONNECTION_URL = 'http://localhost'
-const PORT = process.env.PORT || 4000;
-
-// mongoose.connect(CONNECTION_URL)
-// .then(() => {app.listen(PORT, ()=> console.log(`Server running on port: ${PORT}`))})
-// .catch((error)=>console.error(error.message))
+app.use(express.json())
 
 
-app.listen(PORT, ()=> console.log(`Server running on port: ${PORT}`))
+app.set('port', process.env.PORT || 3000);
+
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port", this.address().port, app.settings.env);
+});
 
 
 

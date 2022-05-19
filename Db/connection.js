@@ -3,9 +3,8 @@ const mongoose = require('mongoose');
 
 const mongoURI =
   process.env.NODE_ENV === 'production'
-    ? process.env.DB_URL
-    : 'mongodb://localhost/';
-    //:process.env.DEV_DB_URL
+    ? process.env.MONGODB_URL
+    :"mongodb+srv://TeamNJT:3umw3yvjajBzn3D6@cluster0.qo3ry.mongodb.net/?retryWrites=true&w=majority"
 
 mongoose.connect(mongoURI, {
   })
