@@ -1,11 +1,11 @@
-const projectModel = require('../models/projectSchema.js');
+const setFirstShema = require('../Models/projectSchema.js');
 const seedData = require('./seedData.json');
 
 
-SchemaSetUp.deleteMany({})
+setFirstShema.deleteMany({})
   .then(() => {
 
-    return SchemaSetUp.insertMany(seedData);
+    return setFirstShema.insertMany(seedData);
   })
   .then(console.log)
   .catch(console.error)

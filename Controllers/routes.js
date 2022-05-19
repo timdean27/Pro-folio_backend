@@ -1,6 +1,6 @@
-export const getRoutes = (req, res) =>{
-    res.send("Back end port 4000")
-};
+// export const getRoutes = (req, res) =>{
+//     res.send("Back end port 4000")
+// };
 
 
 // export const getIDRoutes = async (req, res) =>{
