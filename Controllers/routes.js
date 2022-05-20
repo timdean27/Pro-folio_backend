@@ -1,17 +1,31 @@
-// export const getRoutes = (req, res) =>{
-//     res.send("Back end port 4000")
-// };
+const setFirstShema = require('../Models/projectSchema');
+
+const mainGet = (req, res) =>{
+    res.send("Back end port 4000")
+};
 
 
-// export const getIDRoutes = async (req, res) =>{
+const getFindAll = async (req, res) => {
+        try {
+            res.set('Access-Control-Allow-Origin', '*');
+            res.json(await setFirstShema.find({}));
+        } catch (error) {
+            res.status(400).json(error);
+        }
+};
+
+
+
+// const getByID = async (req, res) =>{
 //     try {
-//         res.json(await info.find({}));
+//         res.json(await info.findById(req.params.id, req.body))
 //     } catch (error) {
 //         res.status(400).json(error);
 //     }
 // };
 
-// export const postRoutes = async (req, res) =>{
+
+// const postRoutes = async (req, res) =>{
 //     try {
 //         res.json(await info.create(req.body))
 //     } catch (error) {
@@ -20,7 +34,7 @@
 // };
 
 
-// export const putRoutes = async (req, res) =>{
+//  const putRoutes = async (req, res) =>{
 //     try {
 //         res.json(await info.findByIdAndUpdate(req.params.id, req.body))
 //     } catch (error) {
@@ -28,7 +42,7 @@
 //     }
 // };
 
-// export const deleteRoutes = async (req, res) =>{
+// const deleteRoutes = async (req, res) =>{
 //     try {
 //         res.json(await info.findByIdAndRemove(req.params.id))
 //     } catch (error) {
@@ -37,3 +51,9 @@
 // };
 
 
+
+module.exports = {
+    getRoutes: mainGet,
+    getFindAll,
+
+}
