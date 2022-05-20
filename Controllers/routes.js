@@ -56,4 +56,4 @@ module.exports = {
     getRoutes: mainGet,
     getFindAll,
 
-}
+};
