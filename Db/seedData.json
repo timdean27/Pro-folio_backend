@@ -24,11 +24,11 @@
            "project":{
                       "image":"image-test",
                       "shortVideo":"shortVideo-test",
-                      "Description":"Discription-test"
+                      "Description":"Description-test"
                     },
 
            "updates":{
-                      "updateDescription":"updateDiscription-test",
+                      "updateDescription":"updateDescription-test",
                       "additions":"additions-test",
                       "date": ""
                       }
