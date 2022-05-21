@@ -25,12 +25,12 @@ const FirstSchema = new mongoose.Schema({
            project:{
                       image:String,
                       shortVideo:String,
-                      Discription:String,
+                      Description:String,
                       
                     },
 
            updates:{
-                      updateDiscription:String,
+                      updateDescription:String,
                       additions:String,
                       updatedAt: {type: Date, default: Date.now}
                       },
