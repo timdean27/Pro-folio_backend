@@ -5,15 +5,15 @@ const router = express.Router();
 
 
 
-router.get('/info', getRoutes)
+router.get('/', getRoutes)
 
 // this is on localhost:4000/home/json
 router.get('/json', getFindAll)
 
-router.get('/info', getByID)
-router.post('/info', postRoutes)
-router.put('/info/:id', putRoutes)
-router.delete('/info/:id', deleteRoutes)
+router.get('/json', getByID)
+router.post('/json', postRoutes)
+router.put('/json/:id', putRoutes)
+router.delete('/json/:id', deleteRoutes)
 
 
 module.exports = router
