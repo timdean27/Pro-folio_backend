@@ -57,7 +57,11 @@ const deleteRoutes = async (req, res) =>{
 
 
 module.exports = {
-    getRoutes,
+    getRoutes: mainGet,
     getFindAll,
+    getByID,
+    postRoutes,
+    putRoutes,
+    deleteRoutes,
 
 };
