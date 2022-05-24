@@ -1,11 +1,45 @@
-const setFirstShema = require('../Models/projectSchema.js');
-const seedData = require('./seedData.json');
-
-
-setFirstShema.deleteMany({})
+const {setUserSchema,setMarketingSchema,setContactSchema ,setProjectsSchema}= require('../Models/projectSchema.js');
+const userSeedData = require('./seedData/userSeedData.json');
+const marketingSeedData = require('./seedData/marketingSeedData.json');
+const contactSeedData = require('./seedData/contactSeedData.json');
+const projectsSeedData = require('./seedData/projectsSeedData.json');
+setUserSchema.deleteMany({})
   .then(() => {
 
-    return setFirstShema.insertMany(seedData);
+    return setUserSchema.insertMany(userSeedData);
+  })
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => {
+    process.exit();
+  });
+
+  setMarketingSchema.deleteMany({})
+  .then(() => {
+
+    return setMarketingSchema.insertMany(marketingSeedData);
+  })
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => {
+    process.exit();
+  });
+
+  setContactSchema.deleteMany({})
+  .then(() => {
+
+    return setContactSchema.insertMany(contactSeedData);
+  })
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => {
+    process.exit();
+  });
+  
+  setProjectsSchema.deleteMany({})
+  .then(() => {
+
+    return setProjectsSchema.insertMany(projectsSeedData);
   })
   .then(console.log)
   .catch(console.error)
