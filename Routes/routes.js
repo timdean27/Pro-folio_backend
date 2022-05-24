@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', getRoutes)
 
-// this is on localhost:4000/home/json
+//this is on localhost:4000/home/json
 router.get('/json', getFindAll)
 
 router.get('/json', getByID)
