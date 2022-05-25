@@ -28,6 +28,7 @@ const getUserByID = async (req, res) =>{
 
 const postUserRoute = async (req, res) =>{
     try {
+        console.log(req.body)
         res.set('Access-Control-Allow-Origin', '*');
         res.json(await setUserSchema.create(req.body))
     } catch (error) {

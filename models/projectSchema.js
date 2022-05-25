@@ -24,31 +24,34 @@ const ContactSchema = new mongoose.Schema({
 })
 const ProjectsSchema = new mongoose.Schema({         
 
-  "Projects":{
            project:{
                       image:String,
                       shortVideo:String,
                       Description:String,
                       
-                    },
-
-           updates:{
-                      updateDescription:String,
-                      additions:String,
-                      updatedAt: {type: Date, default: Date.now}
-                      },
-            }
+                    }
         
     })
-  
+    
+const UpdatesSchema = new mongoose.Schema({   
+    updates:{
+      updateDescription:String,
+      additions:String,
+      comments:String,
+      updatedAt: {type: Date, default: Date.now}
+      }
+    })
+
   const setUserSchema = mongoose.model('Users', UserSchema);
   const setMarketingSchema= mongoose.model('Marketing', MarketingSchema);
   const setContactSchema = mongoose.model('Contacts', ContactSchema);
   const setProjectsSchema = mongoose.model('Projects', ProjectsSchema);
-  
+  const setUpdatesSchema = mongoose.model('Updates', UpdatesSchema);
+
   module.exports = {
     setUserSchema,
     setMarketingSchema,
     setContactSchema ,
     setProjectsSchema,
+    setUpdatesSchema 
   }
