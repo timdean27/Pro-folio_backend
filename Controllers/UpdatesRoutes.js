@@ -1,6 +1,8 @@
 const {setUpdatesSchema}= require('../Models/projectSchema.js');
 
 
+
+
 const findAllUpdates = async (req, res) => {
     try {
         res.set('Access-Control-Allow-Origin', '*');

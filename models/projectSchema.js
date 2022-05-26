@@ -38,6 +38,7 @@ const UpdatesSchema = new mongoose.Schema({
       updateDescription:String,
       additions:String,
       comments:String,
+      projectID:String,
       updatedAt: {type: Date, default: Date.now}
       }
     })
