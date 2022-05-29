@@ -26,10 +26,11 @@ const ContactSchema = new mongoose.Schema({
 const ProjectsSchema = new mongoose.Schema({         
 
            project:{
+                      title:String,
                       image:String,
                       shortVideo:String,
                       Description:String,
-                      
+                      appLink:String
                     }
         
     })
