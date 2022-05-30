@@ -3,7 +3,7 @@
     "user":{
         "username": "username-test",
         "profileName": "profileName-test",
-        "About": "About-test",
+        "about": "About-test",
         "profilePic": "profilePic-test",
         "password": "password-test"
         }
