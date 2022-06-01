@@ -42,8 +42,9 @@ const UpdatesSchema = new mongoose.Schema({
       additions:String,
       comments:String,
       projectID:String,
-      updatedAt: {type: Date, default: Date.now}
-      }
+      date_Of_Update: {type: Date, default: Date.now},
+      date_Of_Post:{type: Date, default: Date.now}
+    }
     })
 
   const setUserSchema = mongoose.model('Users', UserSchema);
