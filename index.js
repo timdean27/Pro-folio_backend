@@ -10,12 +10,9 @@ app.use(cors());
 app.use(express.json())
 app.use('/home', postRoutes)
 
-app.set('port', process.env.PORT || 4000);
+const PORT = process.env.PORT || '8080'
 
-app.listen(process.env.PORT || 4000, function(){
-  console.log("Express server listening on port", this.address().port, app.settings.env);
-});
-
+app.set("port", PORT)
 
 
 
