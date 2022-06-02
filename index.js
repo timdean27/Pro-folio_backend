@@ -5,7 +5,7 @@ const cors = require("cors");
 const postRoutes = require('./Routes/routes.js')
 
 
-app.get('/favicon.ico', (req, res) => {res.send("dummy")})
+app.get('/favicon.ico', (req, res) => {res.send(".......")})
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.json())
