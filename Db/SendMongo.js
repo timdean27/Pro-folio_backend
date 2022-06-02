@@ -1,4 +1,4 @@
-const {setUserSchema,setMarketingSchema,setContactSchema ,setProjectsSchema,setUpdatesSchema}= require('../Models/projectSchema.js');
+const {setUserSchema,setMarketingSchema,setContactSchema ,setProjectsSchema,setUpdatesSchema}= require('../Models/projectSchema.js')
 const userSeedData = require('./seedData/userSeedData.json');
 const marketingSeedData = require('./seedData/marketingSeedData.json');
 const contactSeedData = require('./seedData/contactSeedData.json');
