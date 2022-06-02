@@ -6,13 +6,17 @@ const postRoutes = require('./Routes/routes.js')
 
 
 app.get('/favicon.ico', (req, res) => {res.send("dummy")})
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.json())
 app.use('/home', postRoutes)
 
-const PORT = process.env.PORT || '8080'
+app.set('port', process.env.PORT || 4000);
 
-app.set("port", PORT)
+
+app.listen(process.env.PORT || 4000, function(){
+  console.log("Express server listening on port", this.address().port, app.settings.env);
+});
 
 
 
