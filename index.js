@@ -5,10 +5,11 @@ const cors = require("cors");
 const postRoutes = require('./Routes/routes.js')
 
 
-app.get('/favicon.ico', (req, res) => {res.send(".......")})
+
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.json())
+app.get('/favicon.ico', (req, res) => {res.send(".......")})
 app.use('/home', postRoutes)
 
 app.set('port', process.env.PORT || 4000);

@@ -1,4 +1,4 @@
-const {setUserSchema}= require('../Models/projectSchema.js');
+const {setUserSchema}= require('../models/projectSchema.js');
 
 const testGet = (req, res) =>{
     res.send("Back end port 4000")
