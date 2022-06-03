@@ -1,4 +1,4 @@
-const {setContactSchema}= require('../Models/projectSchema.js');
+const {setContactSchema}= require('../models/projectSchema.js');
 
 
 const findAllContact = async (req, res) => {

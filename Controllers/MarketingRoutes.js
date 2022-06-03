@@ -1,4 +1,4 @@
-const {setMarketingSchema}= require('../Models/projectSchema.js');
+const {setMarketingSchema}= require('../models/projectSchema.js');
 
 
 const findAllMarketing = async (req, res) => {

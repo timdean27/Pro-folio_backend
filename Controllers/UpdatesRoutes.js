@@ -1,4 +1,4 @@
-const {setUpdatesSchema}= require('../Models/projectSchema.js');
+const {setUpdatesSchema}= require('../models/projectSchema.js');
 
 
 

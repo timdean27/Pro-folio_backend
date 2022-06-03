@@ -1,4 +1,4 @@
-const {setProjectsSchema}= require('../Models/projectSchema.js');
+const {setProjectsSchema}= require('../models/projectSchema.js');
 
 
 const findAllProjects = async (req, res) => {

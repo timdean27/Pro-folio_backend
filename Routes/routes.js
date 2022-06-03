@@ -1,5 +1,5 @@
 const express = require('express');
-const {setUserSchema,setMarketingSchema,setContactSchema ,setProjectsSchema,setUpdatesSchema}= require('../Models/projectSchema.js');
+const {setUserSchema,setMarketingSchema,setContactSchema ,setProjectsSchema,setUpdatesSchema}= require('../models/projectSchema.js');
 const {testGet , findAllUsers, getUserByID ,postUserRoute , putUserRoute ,deleteUserRoute} = require('../Controllers/userRoutes.js')
 const {findAllMarketing, getMarketingByID ,postMarketingRoute , putMarketingRoute ,deleteMarketingRoute} = require('../Controllers/MarketingRoutes.js')
 const {findAllContact, getContactByID ,postContactRoute , putContactRoute ,deleteContactRoute} = require('../Controllers/ContactRoutes.js')
